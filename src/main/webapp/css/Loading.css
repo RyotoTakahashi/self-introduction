@@ -1,0 +1,104 @@
+/* ローディング画面の設定 */
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black; /* ローディング中は黒 */
+  z-index: 9999;
+  text-align: center;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.7s ease;  /* フェードアウト用 */
+}
+#loading.fadeout {
+  opacity: 0;
+}
+.loading_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ローディングテキスト設定 */
+#loading_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  z-index: 10;
+}
+
+/* 割れる画面設定 */
+.loader_cover {
+  width: 100%;
+  height: 50%;
+  background-color: #333;
+  transition: all 0.6s cubic-bezier(.04, .435, .315, .9);
+  transform: scaleY(1);
+}
+
+.loader_cover-up {
+  position: absolute;
+  top: 0;
+  transform-origin: center top;
+}
+
+.loader_cover-down {
+  position: absolute;
+  bottom: 0;
+  transform-origin: center bottom;
+}
+
+/* 進捗バーの設定 */
+.progress_wrap {
+  position: absolute;
+  top: 50%;  /* 割れる部分に合わせて中央配置 */
+  left: 50%;
+  width: 60%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(-50%);
+  z-index: 5;
+}
+
+.progress_bar {
+  width: 100%;
+  height: 100%;
+  background: lime;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.1s;
+}
+
+/* 進捗バーが100%になったときの割れるアニメーション */
+.progress_bar.split {
+  animation: splitAnimation 0.6s forwards;
+}
+
+@keyframes splitAnimation {
+  0% {
+    transform: scaleX(1);
+    background-color: lime;
+  }
+  50% {
+    transform: scaleX(0.5);
+    background-color: lime;
+  }
+  100% {
+    transform: scaleX(0);
+    background-color: lime;
+    opacity: 0;
+  }
+}
+
+/* 割れた後の背景色をLimeに変える */
+#loading.covered {
+  background-color: lime;
+}
+
+/* 割れるアニメーション */
+.loader_cover-up.coveranime,
+.loader_cover-down.coveranime {
+  transform: scaleY(0);
+}
