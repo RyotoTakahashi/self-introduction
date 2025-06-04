@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<title>自己紹介サイト</title>
+	<link rel="stylesheet" href="css/Loading.css">
+	<link rel="stylesheet" href="css/Header_and_footer.css">
+	<link rel="stylesheet" href="css/Content.css">
+</head>
+
+<body>
+	<!-- ローディング画面 -->
+	<div id="loading">
+		<div class="loading_container">
+			<div class="loader_cover loader_cover-up"></div>
+			<div class="progress_wrap">
+				<div class="progress_bar"></div>
+			</div>
+			<div class="loader_cover loader_cover-down"></div>
+			<p id="loading_text">Loading</p>
+		</div>
+	</div>
+
+	<!-- コンテンツ -->
+	<div id="content" style="display:none;">
+		<header id="header">
+			<img src="img/Header.jpg" alt="header">
+			<div id="overlay">
+				<h1>Introduction</h1>
+			</div>
+			<div class="tab_menu">
+				<ul>
+					<li><a href="#top">Top</a></li>
+					<li><a href="#profile">Profile</a></li>
+					<li><a href="#favorite">Favorite</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
+		</header>
+
+		<!-- Top Section -->
+		<div class="article" id="top">
+			<div class="transparent-div">
+				<div>
+					<img src="img/Pic.jpg">
+					<h3>Hallo!</h3>
+				</div>
+			</div>
+		</div>
+
+		<!-- Profile Section -->
+		<div class="article" id="profile">
+			<div class="transparent-div">
+				<h2>髙橋嶺斗です！よろしくお願いします。</h2>
+				<p>出身：北海道札幌市</p>
+				<p>大学：小樽商科大学</p>
+				<p>年齢：22才（2003年うまれ）</p>
+			</div>
+		</div>
+
+		<!-- Favorite Section -->
+		<div class="article" id="favorite">
+			<div class="transparent-div">
+				<img src="img/fab.jpg">
+				<p>休日はゲームをしたり、友達と遊んだりしてます</p>
+				<p>酒は弱くはないですけど弱い扱いされてます(実際弱め)</p>
+				<p>コーヒー淹れるのが好きでした（過去形）(※飲むのも好きです)</p>
+			</div>
+		</div>
+
+		<!-- Contact Section -->
+		<div class="article" id="contact">
+			<div class="transparent-div">
+				<h2>コンタクト</h2>
+				<p> <a href="https://github.com/RyotoTakahashi">GitHub(アカウント名RyotoTakahashi)</a></p>
+				<p><a href="mailto:r.takahashi@a-force.co.jp">メールアドレス(r.takahashi@a-force.co.jp)</a></p>
+				<p><a href="tel:08082956092">携帯電話(080-8295-6092)</a></p>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<h6>(c) Ryoto Takahashi 2025.04</h6>
+	</footer>
+
+	<script src="js/jquery-3.7.1.js"></script>
+	<script src="js/progressbar.js"></script>
+	<script src="js/Loading.js"></script>
+	<script src="js/page.js"></script>
+</body>
+
+</html>
