@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+}
+/* ヘッダー画像の基本設定 */
+#header {
+  position: relative;
+  width: 100%;
+}
+
+/* 画像は画面幅に応じて縮む・縦横比維持 */
+#header img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 文字画像上に重ねる */
+#overlay {
+  position: absolute;
+  top: 50%;  /* 画像の中央 */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+h1{
+	font-size: 3rem;
+}
+/* tab_menu全体を画像の下端に接する位置に配置 */
+.tab_menu {
+  position: absolute;
+  bottom: 0;          /* 画像の一番下にピッタリ */
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);  /* 背景を半透明にして画像上でも視認性UP */
+}
+
+/* リスト全体を横並びに */
+.tab_menu ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;  /* 点（●）を消す */
+}
+
+/* ボタン風のli設定：幅を均等に4分割 */
+.tab_menu li {
+  flex: 1;  /* 均等配分 */
+  text-align: center;
+}
+
+.article {
+  flex-grow: 1;  /* コンテンツ部分が余白を吸収してフッターを押し下げる */
+}
+
+#footer {
+  position: absolute;
+  bottom:0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  text-align: center;
+  color: white;}
+ h6{
+  padding: 0px;
+  margin: 0;
+}
