@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const dotInterval = setInterval(() => {
     dots = (dots + 1) % (maxDots + 1);
     loadingText.textContent = "Loading" + ".".repeat(dots);
-  }, 500);
+  }, 250);
 
   // 進捗チェックループ
   const progressCheck = setInterval(() => {
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const resourceProgress = total === 0 ? 1 : loaded / total;
     const elapsedTime = new Date().getTime() - startTime;
-    const timeProgress = Math.min(elapsedTime / 4000, 1);
+    const timeProgress = Math.min(elapsedTime / 2000, 1);
 
     const progress = Math.min(resourceProgress, timeProgress);
     progressBar.style.transform = `scaleX(${progress})`;

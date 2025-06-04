@@ -1,0 +1,49 @@
+@charset "UTF-8";
+html{
+	overflow: hidden;
+}
+body {
+	background-color: darkcyan;
+}
+
+.article {
+  position: absolute;
+  top: 200px;  /* ヘッダーの下あたりに調整 */
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  text-align: center;
+}
+
+.article.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition-delay: 0.5s;
+}
+
+.transparent-div {
+	background-color: rgba(255, 255, 255, 0.8);
+	/* 透明度の低い白 */
+	width: 80%;
+	min-height: calc(100vh - 280px);
+	/* 任意の高さに調整 */
+	margin: 16px auto;
+	padding: 16px;
+	border-radius: 8px;
+	color: black;
+	/* 文字色を黒に設定 */
+	font-size: 1.25rem;
+	/* フォントサイズ調整 */
+	box-sizing: border-box;
+	text-align: center;
+
+}
+
+#content {
+	flex-grow: 1;
+}
